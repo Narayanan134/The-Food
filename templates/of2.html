@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/order.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/orderinfo.css' %}">
+    <title>Base</title>
+</head>
+<body>
+    
+    <header>
+        <div id="sticky" class="sticky">
+
+        ONE</div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:8000/" id="h1">Home</a></li>
+                <li><a href="http://127.0.0.1:8000/order/" id="n1">Order</a></li>
+                {% if user.is_authenticated %}
+                <li id="s">{{user.first_name}}</li>
+                <li><a href="http://127.0.0.1:8000/accounts/logout" id="l">Logout</a></li><br>
+                {% else %}
+                <li><a href="http://127.0.0.1:8000/accounts/signup" id="s">Sign Up</a></li>
+                <li><a href="http://127.0.0.1:8000/accounts/login" id="l">Login</a></li><br>
+                {% endif %}
+            </ul>
+        </nav>
+      
+        <article>
+            <div class="oi">
+                    <div class="oi2">
+                        {% block content %}
+
+
+                        {% endblock %}
+                
+                        <table>
+                            <tr>
+                              <th>Food Item</th>
+                              <th>Quantity</th>
+                            </tr>
+                            <tr>
+        
+        
+                              <td>{{  Basic }}
+                                {{ Idli }}
+                                {{ Dosa }}
+                              </td>
+        
+                              <td>{{ QuantityBasic }}
+                                {{ QuantityIdli }}
+                                {{ QuantityDosa}}
+        
+                              </td>
+        
+                            </tr>
+        
+                          </table>
+                    </div>
+
+              </div>
+              
+        </article>
+        
+
+
+    </body>
+    </html>

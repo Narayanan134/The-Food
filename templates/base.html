@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/order.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/orderinfo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'styles/opensans-font.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/line-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/donatethe.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/donatemain.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style3.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/font-awesome3.css' %}">
+    
+    <title>Base</title>
+</head>
+<body>
+    
+<div class="navbar">
+        <div class="logo">
+            The Food
+        </div>
+
+        <ul class="nav">
+  
+                <li><a href="http://127.0.0.1:8000/">Home</a></li>
+                <li><a href="http://127.0.0.1:8000/donatefood/donate">Donate Food</a></li>
+                <li><a href="http://127.0.0.1:8000/order/">Order</a></li>
+                {% if user.is_authenticated %}
+                <li id="s">{{user.first_name}}</li>
+                <li><a href="http://127.0.0.1:8000/accounts/logout">Logout</a></li><br>
+                {% else %}
+                <li><a href="http://127.0.0.1:8000/accounts/signup">Sign Up</a></li>
+                <li><a href="http://127.0.0.1:8000/accounts/login">Login</a></li><br>
+                {% endif %}
+        </ul>
+</div>
+
+    {% block content %}
+
+
+    {% endblock %}
+</div> 
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    The Food<br><br>
+                    Thought of donating food? Here's an easy way to donate food with "The Food"<br><br>
+                    Hungry? There's always food for everyone..Order your food whenever wherever you want without the need for login and pay for the food with what you have
+                </div>
+                <div class="footer-section link">
+                    <ul>
+                        <li><a href="http://127.0.0.1:8000/">Home</a></li>
+                        <li><a href="http://127.0.0.1:8000/donatefood/donate">Donate Food</a></li>
+                        <li><a href="http://127.0.0.1:8000/order/">Order</a></li>
+                        <li><a href="http://127.0.0.1:8000/accounts/signup">Sign Up</a></li>
+                        <li><a href="http://127.0.0.1:8000/accounts/login">Login</a></li>
+                    </ul>
+                    
+                </div>
+                <div class="footer-section social">
+                    Follow on<br><br>
+                    <i class="fa fa-facebook-official"></i>&nbsp &nbsp Facebook<br><br>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp &nbsp Instagram<br><br>
+                    <i class="fa fa-github" aria-hidden="true"></i>&nbsp &nbsp Github                  
+                </div>
+            </div>
+            <div class="footer-bottom">
+                Designed By Narayanan
+            </div>
+        
+        
+    </footer>
+
+
+ 
+</body>
+</html>

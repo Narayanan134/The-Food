@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="page-content">
+
+<div class="form-v4-content">
+  <div class="form-left">
+    <div class="form-left-last">
+      Already have an account?
+      <a href="http://127.0.0.1:8000/accounts/login">
+      <input type="submit" name="account" class="account" value="Login"></a><br>
+      If you wish to have an account and be a regular customer<br>Sign Up and login using your account
+    </div>
+  </div>
+  <form class="form-detail" action="#" method="post" id="myform">
+    {% csrf_token %}
+    <h2>Sign Up</h2>
+    <div class="form-group">
+      <div class="form-row form-row-1">
+        <label for="first_name">First Name</label>
+        <input type="text" name="firstname" id="first_name" class="input-text">
+      </div>
+      <div class="form-row form-row-1">
+        <label for="last_name">Last Name</label>
+        <input type="text" name="lastname" id="last_name" class="input-text">
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="your_email">Your Email</label>
+      <input type="text" name="email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+    </div>
+    <div class="form-row">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" class="input-text">
+    </div>
+    <div class="form-group">
+      <div class="form-row form-row-1 ">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="input-text" required>
+      </div>
+      <div class="form-row form-row-1">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="cp" id="comfirm_password" class="input-text" required>
+      </div>
+    </div>
+    <div class="form-row-last">
+      <input type="submit" name="register" class="register" value="Sign Up">
+    </div>
+  </form>
+</div>
+{% for message in messages %}
+<h3>{{ message }}</h3>
+
+{% endfor %}
+</div>
+{% endblock %}
+    

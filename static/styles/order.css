@@ -1,0 +1,120 @@
+.b1{
+    background-color: #8B0000;
+}
+
+.container3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 600px;
+    padding-top: 75px;
+}
+.container4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 600px;
+    padding-top: 75px;
+}
+.container3 .box{
+    position: relative;
+    width: 350px;
+    padding: 40px ;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px; 
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 75px;
+    background-color: #F0E68C;
+  }
+
+  .container3 .box .icon1{
+      position: relative;
+      color: #fff;
+      width: 80px;
+      height: 80px;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      border-radius: 50%;
+      font-size: 40px;
+      font-weight: 700;
+      transition: 1s;
+  }
+
+.container3 .box .content{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+    text-decoration: none;
+    text-emphasis-color: black;
+    color: black;
+}
+.container3 .box:hover .content{
+    color:black;
+}
+.container3 .box .content h2{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+    text-decoration: none;
+    overflow: hidden;
+}
+          
+.container3 .box:nth-child(1) .icon1{
+    box-shadow: 0 0 0 0 #253529;
+    background-attachment: #253529;
+}
+.container3 .box:nth-child(2) .icon1{
+    box-shadow: 0 0 0 0 #253529;
+    background-attachment: #253529;
+}
+.container3 .box:nth-child(3) .icon1{
+    box-shadow: 0 0 0 0 #253529;
+    background-attachment: #253529;
+}
+.container3 .box:nth-child(1):hover .icon1{
+    box-shadow: 0 0 0 400px #253529;
+
+}
+.container3 .box:nth-child(2):hover .icon1{
+    box-shadow: 0 0 0 400px #253529;
+
+}
+.container3 .box:nth-child(3):hover .icon1{
+    box-shadow: 0 0 0 400px #253529;
+
+}
+
+  .b2{
+    background-color:#253529;
+}
+
+.containero4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 600px;
+    padding-top: 75px;
+    color: white;
+    position: absolute;
+    font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+    font-size: 30px;
+}
+.containero5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 600px;
+    padding-top: 75px;
+    color: white;
+    position: absolute;
+    font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+    font-size: 30px;
+    right:20px;
+}

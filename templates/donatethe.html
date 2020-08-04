@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="w3l-contact-11">
+  <div class="contacts-main">
+    <div class="contant11-top-bgt">
+      <div class="wrapper">
+        <div class="d-grid contact section-gap">
+          <div class="contact-infot-left d-grid text-center">
+            <div class="contact-infot">
+                <a href="http://127.0.0.1:8000/donatefood/donateyou">
+              <span class="fa fa-location-arrow" aria-hidden="true"></span>
+              <h4>Donate Food You Have</h4>
+              <p>Click Here to Donate Food You Have</p></a>
+            </div>
+
+            <div class="contact-infot">
+                <a href="http://127.0.0.1:8000/donatefood/thedonate">
+              <span class="fa fa-envelope-open-o" aria-hidden="true"></span>
+              <h4>Donate Food From Our The Food </h4>
+              <p>Fill Up the Form below to doante food from our The Food</p>
+          </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-41-mian section-gap">
+      <div class="wrapper">
+        <h3 class="cont-head">Donate Food From The Food</h3>
+        <div class="d-grid align-form-map">
+          <div class="form-inner-cont">
+            <form action="http://127.0.0.1:8000/donatefood/end2" method="post" class="signin-form">
+              {% csrf_token %}
+              <div class="form-input">
+                <label for="w3lName">Your Fullname</label>
+                <input type="text" name="tdname" id="w3lName" placeholder="" />
+              </div>
+              <div class="form-input">
+                <label for="w3lMessage">Food Delivery Address</label>
+                <textarea placeholder="" name="tdaddress" id="w3lMessage" required=""></textarea>
+              </div>
+              <div class="form-input">
+                <label for="w3lSender">Your Contact Number</label>
+                <input type="tel" name="tdcontact" id="w3lSender" placeholder="" required="" />
+              </div>
+              <div class="form-input">
+                <label for="w3lSender">Number of People</label>
+                <input type="number" name="tdpeople" id="w3lSender" placeholder="0">
+              </div>
+              <div class="form-input">
+                <label for="w3lName">Orphanage you want to donate (Check orphanages from the map)</label>
+                <input type="text" name="tdorphanage" id="w3lName" placeholder="" />
+              </div>
+              
+
+
+              <button type="submit" class="btn btn-contact">Submit</button>
+
+            </form>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d248723.01169548868!2d80.03365713170312!3d13.080350437296637!3m2!1i1024!2i768!4f13.1!2m1!1sorphanage%20in%20chennai!5e0!3m2!1sen!2sin!4v1596512777785!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %} 

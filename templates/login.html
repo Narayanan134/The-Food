@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="page-content2">
+<div class="form-v4-content">
+    <div class="form-left">
+      <div class="form-left-last">
+        Don't have an account?
+        <a href="http://127.0.0.1:8000/accounts/signup">
+        <input type="submit" name="account" class="account" value="Sign Up"></a><br>
+        
+        
+      </div>
+    </div>
+    <form class="form-detail" action="#" method="post" id="myform">
+      {% csrf_token %}
+      <h2>Login</h2>
+      <div class="form-row">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" class="input-text">
+      </div>
+      <div class="form-row form-row-1 ">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="input-text" required>
+      </div>
+      <div class="form-row-last">
+        <input type="submit" name="register" class="register" value="Login">
+      </div>
+        {% for message in messages %}
+        <h3>{{ message }}</h3>
+        {% endfor %}
+
+</form>
+</div>
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base3.html' %}
+{% load static %}
+{% block content %}
+<div class="oii">
+<br>
+<br>
+<br>
+<br>
+        <div class="login-box3">
+        <form action="bill" method="POST">
+          {% csrf_token %}
+          <div class="user-box">
+          <input type="text" name="nameofc"><br>
+          <label>Name</label>
+          </div>
+          <div class="user-box">
+          <input type="text" name="address"><br>
+          <label>Address</label>
+          </div>
+          <div class="user-box">
+          <input type="tel" name="contact"><br>
+          <label>Contact Number</label>
+          </div>
+          <button type="submit" class="example_e3">Order</button>
+        </form>
+  
+          <div class="oi2">
+            <h2>Food</h2>
+            <p>Address For Refernece : No.21,Bharathiyar Colony,KK Nagar<br>
+            Trichy,Tamilnadu<br>
+            India
+            </p>
+            <h1>
+                {% for args2 in args2 %}
+
+                  {{  args2  }}
+
+                {% endfor %}
+    
+              </h1>
+      </div>
+     
+      </div>
+    
+
+{% endblock %}

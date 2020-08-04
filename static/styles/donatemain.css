@@ -1,0 +1,87 @@
+.b1d{
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5bbe2187755be2787c7b13ab/1553120279013-V9IJEIH64M916UTZ7LVP/ke17ZwdGBToddI8pDm48kL5w8t8c_MtOyR1F4YQBj897gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UbClUdY7bQa_Cs5VREhgNWFUk-f_w5jmxszvOEOWTb16m4bjm9DAHF2kOsIZRJKXnA/2019_0309_SurplusFood_Top.png?format=1500w');
+}
+
+.container3d{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 600px;
+    padding-top: 75px;
+}
+
+.container3d .box{
+    position: relative;
+    top:125px;
+    width: 350px;
+    padding: 40px ;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px; 
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 75px;
+    background-color: #00203FFF;
+  }
+
+  .container3d .box .icon1{
+      position: relative;
+      color: #fff;
+      width: 80px;
+      height: 80px;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      border-radius: 50%;
+      font-size: 40px;
+      font-weight: 700;
+      transition: 1s;
+  }
+
+.container3d .box .content{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+    text-decoration: none;
+    text-emphasis-color: black;
+    color: white;
+}
+.container3d .box:hover .content{
+    color:white;
+}
+.container3d .box .content h2{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+    text-decoration: none;
+    overflow: hidden;
+}
+          
+.container3d .box:nth-child(1) .icon1{
+    box-shadow: 0 0 0 0 #253529;
+    background-attachment: #253529;
+}
+.container3d .box:nth-child(2) .icon1{
+    box-shadow: 0 0 0 0 #253529;
+    background-attachment: #253529;
+}
+.container3d .box:nth-child(3) .icon1{
+    box-shadow: 0 0 0 0 #253529;
+    background-attachment: #253529;
+}
+.container3d .box:nth-child(1):hover .icon1{
+    box-shadow: 0 0 0 400px #253529;
+
+}
+.container3d .box:nth-child(2):hover .icon1{
+    box-shadow: 0 0 0 400px #253529;
+
+}
+.container3d .box:nth-child(3):hover .icon1{
+    box-shadow: 0 0 0 400px #253529;
+
+}
