@@ -16,7 +16,20 @@ def dinner(request):
 def orderinfo(request):
     return render(request,"orderinfo.html")
 def orderinfob(request):
-    return render(request,"orderinfob.html")
+    if request.method=="POST":
+        qtyi=int(request.POST['qtyi'])
+        qtyd=int(request.POST['qtyd'])
+        qtypon=int(request.POST['qtypon'])
+        qtyth=int(request.POST['qtyth'])
+        qtyup=int(request.POST['qtyup'])
+        qtypoo=int(request.POST['qtypoo'])
+        args1={'qtyi':qtyi,'qtyd':qtyd,'qtypon':qtypon,'qtyth':qtyth,'qtyup':qtyup,'qtypoo':qtypoo}
+        bt=breakfastt(qtyi=qtyi,qtyd=qtyd,qtypon=qtypon,qtyth=qtyth,qtyup=qtyup,qtypoo=qtypoo)
+        bt.save()
+        print(args1)
+        return render(request,"orderinfob.html",args1)
+    else:
+        return render(request,"breakfast.html")
 def orderinfod(request):
     return render(request,"orderinfod.html")
 def bill(request):
@@ -31,11 +44,11 @@ def bill(request):
         return render(request,"orderinfo.html")
     
     if request.method=="POST":
-        qtycurd=request.POST["qtycurd"]
-        qtydal=request.POST["qtydal"]
-        qtylem=request.POST["qtylem"]
-        qtytam=request.POST["qtytam"]
-        qtyvr=request.POST["qtyvr"]
+        qtycurd=request.POST['qtycurd']
+        qtydal=request.POST['qtydal']
+        qtylem=request.POST['qtylem']
+        qtytam=request.POST['qtytam']
+        qtyvr=request.POST['qtyvr']
         lu=lunchh(qtycurd=qtycurd,qtydal=qtydal,qtylem=qtylem,qtytam=qtytam,qtyvr=qtyvr)
         lu.save()
         args2={'qtycurd':qtycurd,'qtydal':qtydal,'qtylem':qtylem,'qtytam':qtytam,'qtyvr':qtyvr}
@@ -44,27 +57,27 @@ def bill(request):
         return render(request,"lunch.html")
 
     if request.method=="POST":
-        qtyi=request.POST["qtyi"]
-        qtyd=request.POST["qtyd"]
-        qtypon=request.POST["qtypon"]
-        qtyth=request.POST["qtyth"]
-        qtyup=request.POST["qtyup"]
-        qtypoo=request.POST["qtypoo"]
+        qtyi=int(request.POST['qtyi'])
+        qtyd=int(request.POST['qtyd'])
+        qtypon=int(request.POST['qtypon'])
+        qtyth=int(request.POST['qtyth'])
+        qtyup=int(request.POST['qtyup'])
+        qtypoo=int(request.POST['qtypoo'])
         args1={'qtyi':qtyi,'qtyd':qtyd,'qtypon':qtypon,'qtyth':qtyth,'qtyup':qtyup,'qtypoo':qtypoo}
         bt=breakfastt(qtyi=qtyi,qtyd=qtyd,qtypon=qtypon,qtyth=qtyth,qtyup=qtyup,qtypoo=qtypoo)
         bt.save()
-        
+        print(args1)
         return render(request,"orderinfob.html",args1)
     else:
         return render(request,"breakfast.html")
 
     if request.method=="POST":
-        qtyi=request.POST["qtyi"]
-        qtyd=request.POST["qtyd"]
-        qtypon=request.POST["qtypon"]
-        qtyth=request.POST["qtyth"]
-        qtyup=request.POST["qtyup"]
-        qtypoo=request.POST["qtypoo"]
+        qtyi=request.POST['qtyi']
+        qtyd=request.POST['qtyd']
+        qtypon=request.POST['qtypon']
+        qtyth=request.POST['qtyth']
+        qtyup=request.POST['qtyup']
+        qtypoo=request.POST['qtypoo']
         dn=dinnerr(qtyi=qtyi,qtyd=qtyd,qtypon=qtypon,qtyth=qtyth,qtyup=qtyup,qtypoo=qtypoo)
         dn.save()
         args3={'qtyi':qtyi,'qtyd':qtyd,'qtypon':qtypon,'qtyth':qtyth,'qtyup':qtyup,'qtypoo':qtypoo}

@@ -11,17 +11,17 @@
 
             <center>
                 <div class="oi3">
-                  <h2>Food</h2>
+                  <h2>The Food</h2>
                   <p>Address For Refernece:No.21,Bharathiyar Colony,<br>
                   Trichy,Tamilnadu<br>
                   India
                   </p>
                 
                    
-                <h3>Customer Name:{{nameofc}}</h3>
-                <h3>Customer Address:{{address}}</h3>
-                <h3>Contact Number:{{contact}}</h3>
-                {{qtyi}}
+                <h3>Customer Name: {{nameofc}}</h3>
+                <h3>Customer Address: {{address}}</h3>
+                <h3>Contact Number: {{contact}}</h3>
+                
                   <h2>
                   {% for args1 in args1 %}
                   {{args1}}<br>
@@ -34,7 +34,9 @@
                   {% for args3 in args3 %}
                   {{args3}}<br>
                   {% endfor %}</h2>
+                  <h2>Your order has been placed successfully !</h2>
                 </div>
+                
             </center>
     
           </div>

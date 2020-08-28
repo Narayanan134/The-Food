@@ -76,19 +76,20 @@
 
 
 
-  .example_e {
+
+
+  .example_e1 {
     border: none;
     background: #006400;
     color: #ffffff !important;
     font-weight: 100;
     padding: 20px;
     border-radius: 6px;
-    display: inline-block;
     transition: all 0.3s ease 0s;
     text-decoration: none;
     align-content: center;
     }
-    .example_e:hover {
+    .example_e1:hover {
       background: #006400;
       color: #ffffff !important;
       font-weight: 700 !important;
