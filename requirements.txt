@@ -39,4 +39,5 @@ tqdm==4.48.2
 virtualenv==20.0.18
 virtualenvwrapper-win==1.2.6
 Werkzeug==1.0.1
+whitenoise==5.2.0
 wrapt==1.11.2
