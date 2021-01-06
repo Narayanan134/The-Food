@@ -18,10 +18,57 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #111;
+      }
+      .logo{
+          color:white;
+
+      }
+      /* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  color: white;
+}
+      </style>
+
 </head>
 <body>
     <div class="pagewrapper">
-<div class="navbar">
+<div class="header">
         <div class="logo">
             The Food
         </div>
@@ -48,13 +95,13 @@
 </div> 
     <footer>
         <div class="footer">
-            <div class="footer-content">
-                <div class="footer-section about">
+            <div class="row">
+                <div class="column">
                     The Food<br><br>
                     Thought of donating food? Here's an easy way to donate food with "The Food"<br><br>
                     Hungry? There's always food for everyone..Order your food whenever wherever you want without the need for login and pay for the food with what you have
                 </div>
-                <div class="footer-section link">
+                <div class="column">
                     <ul>
                         <li><a href="http://127.0.0.1:8000/">Home</a></li>
                         <li><a href="http://127.0.0.1:8000/donatefood/donate">Donate Food</a></li>
@@ -64,14 +111,14 @@
                     </ul>
                     
                 </div>
-                <div class="footer-section social">
+                <div class="column">
                     Follow on<br><br>
                     <i class="fa fa-facebook-official"></i>&nbsp &nbsp Facebook<br><br>
                     <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp &nbsp Instagram<br><br>
                     <i class="fa fa-github" aria-hidden="true"></i>&nbsp &nbsp Github                  
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="column">
                 Designed By Narayanan
             </div>
         </div>
